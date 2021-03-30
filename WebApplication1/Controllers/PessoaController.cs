@@ -67,6 +67,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult Registrar(PessoaRegistrarViewModel pessoaRegistrar)
         {
+            //cria uma lista que armazenará os erros
             var erros = new List<string>();
             var novaPessoa = new Pessoa(Guid.NewGuid(), pessoaRegistrar.Nome, pessoaRegistrar.Telefone);
 
